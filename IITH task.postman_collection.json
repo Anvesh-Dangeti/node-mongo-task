@@ -1,0 +1,201 @@
+{
+  "info": {
+    "_postman_id": "9cdb7a41-a4b7-4f0f-a85e-3e15e51b4c93",
+    "name": "IITH task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39542383",
+    "_collection_link": "https://go.postman.co/collection/39542383-9cdb7a41-a4b7-4f0f-a85e-3e15e51b4c93?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"test_11\",\r\n    \"email\": \"test11@test.com\",\r\n    \"password\": \"test11\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/api/auth/register",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"test_7\",\r\n    \"password\": \"test7\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/api/auth/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\": \"meeting room\",\r\n    \"description\": \"book a meeting room for next discussion\",\r\n    \"status\": \"todo\",\r\n    \"priority\": \"high\",\r\n    \"dueDate\": \"2026-4-28\",\r\n    \"assignedTo\": \"69dbce798783433b404f72d4\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/api/tasks/create",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get tasks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:3000/api/tasks/fetch",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "fetch"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "todo",
+              "disabled": true
+            },
+            {
+              "key": "priority",
+              "value": "medium",
+              "disabled": true
+            },
+            {
+              "key": "search",
+              "value": "client",
+              "disabled": true
+            },
+            {
+              "key": "sort",
+              "value": "dueDate",
+              "disabled": true
+            },
+            {
+              "key": "page",
+              "value": "1",
+              "disabled": true
+            },
+            {
+              "key": "limit",
+              "value": "4",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update tasks",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"priority\": \"high\",\r\n    \"status\": \"todo\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:3000/api/tasks/update/69db9c611b4baed97feae3a0",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "update",
+            "69db9c611b4baed97feae3a0"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "soft delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "localhost:3000/api/tasks/delete/69db7c61b9bb8f8e10ae9c65",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "tasks",
+            "delete",
+            "69db7c61b9bb8f8e10ae9c65"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
